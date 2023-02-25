@@ -1,0 +1,133 @@
+<!--check whether hawks is capitalised or not, keep consistency-->
+<!--check sizes for resizing and mobile-->
+<!--change the a tag links on the menu and the button-->
+<!--add smooth scroll-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAWKS Recovery</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Signika:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<!--need to import fonts-->
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__submenu">
+            <a href="./index.html" class="navbar_logo"><img src="images/hawks-logo-without-slogan.png" alt="HAWKS Recovery"></a> <!--use an image for this????-->
+            <div class="navicon">
+                <ul class="navbar_menu">	<!--navigation links-->
+                    <li class="navbar_items">
+                        <a href="./index.html" class="navbar_links">Home</a>
+                    </li>
+                    <li class="navbar_items">
+                        <a href="#galleryscroll" class="navbar_links">Gallery</a>
+                    </li>
+                    <li class="navbar_items">
+                        <a href="#servicesscroll" class="navbar_links">Services</a>
+                    </li>
+                    <li class="navbar_items">
+                        <a href="#contact" class="navbar_links">Contact</a>
+                    </li>
+                </ul>
+                <div class="navbar_toggle" id="menu-button"> <!--3 little lines for a menu button, want it to toggle the menu on and off when clicked on-->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--main section homepage-->
+
+    <div class="main_homepage">
+        <div class="main_homepage_content">
+            <img src="images/hawks-logo-with-slogan.png" alt="HAWKS Recovery 24/7 breakdown service" id="main_homepage_content_hawks">
+            <button class="main_homepage_button"><img src="images/phone-solid.svg"><a href="#contact" id="galleryscroll">+263 77 331 2187 <br> +263 777 913279</a></button>
+        </div>
+    </div>
+
+    <!--gallery section-->
+
+    <div id="gallery">
+        <div class="gallery_content">
+            <div class="gallery_content_row">
+                <div class="gallery_textbox">
+                    <h1>24/7 Emergency Breakdown Rescue, Recovery & Towing</h1>
+                </div> 
+                <img src="images/truck_2.jpg" class="gallery_image">
+            </div>
+            <div class="gallery_content_middlerow">
+                <img src="images/truck_3.jpg" class="gallery_middleimage">
+                <div class="gallery_middletextbox">
+                    <h1>Located in Harare, serving the Zimbabwe area</h1>
+                </div>
+            </div>
+            <div class="gallery_content_row">
+                <div class="gallery_textbox">
+                    <h1>Professional, fast and reliable</h1>
+                </div> 
+                <img src="images/truck_1.jpg" class="gallery_image" id="servicesscroll">
+            </div>
+        </div>
+    </div>
+
+    <!--services section-->
+
+    <div id="services">
+        <div class="services_content">
+            <h1>Here for you, whenever, wherever.</h1>
+            <p>We are a 24/7 breakdown service covering the Zimbabwe area. Our team of experienced professionals are dedicated to providing efficient and reliable towing services for roadside rescue and recovery. We understand how stressful and inconvenient it can be to experience a breakdown, which is why we offer our services around the clock, every day of the week. Whether you need your vehicle towed to your home or a garage of your choice, we've got you covered. Our top priority is to get you and your vehicle safely off the road and back on track as quickly as possible. Don't hesitate to contact us for all your towing needs.</p>
+            <div class="services_icon_container">
+                <div class="services_column">
+                    <i class="fa-solid fa-clock services_icon"></i>
+                    <h2>24/7 services</h2>
+                </div>
+                <div class="services_column">
+                    <i class="fa-solid fa-map-location-dot services_icon"></i>
+                    <h2>Throughout the Zimbabwe area</h2>
+                </div>
+                <div class="services_column">
+                    <i class="fa-solid fa-car services_icon"></i>
+                    <h2>Breakdown, towing, recovery</h2>
+                </div>
+                <div class="services_column">
+                    <i class="fa-solid fa-house services_icon"></i>
+                    <h2>To your home or garage</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--contact secion-->
+
+    <div id="contact">
+        <div class="contact_content">
+            <h1>CONTACT US TODAY</h1>
+            <div class="contact_button_container">
+                <button class="contact_button"><img src="images/phone-solid.svg"><a href="#contact">+263 77 331 2187 <br> +263 777 913279</a></button>
+                <button class="contact_button"><img src="images/envelope-solid.svg"><a href="#contact">hawksrecovery1@gmail.com</a></button>
+                <button class="contact_button"><img src="images/facebook.svg"><a href="https://www.facebook.com/profile.php?id=100089140008999">Click here for our Facebook page</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!--footer section-->
+
+    <footer class="footer">
+        <h3>HAWKS Recovery © 2023</h3>
+        <p>Website created by Stephanie Drage</p>
+    </footer>
+
+<script src="app.js"></script>
+<script src="https://kit.fontawesome.com/52c58519c3.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
