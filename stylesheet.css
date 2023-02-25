@@ -23,6 +23,8 @@ html {
     top: 0;
     left: 0;
     z-index: 10;
+    min-width: 928px;
+    overflow: hidden;
 }
 
 .navbar__submenu {
@@ -123,11 +125,13 @@ html {
 .main_homepage {
     height: 80vh;
     background-color: rgba(28, 27, 28, 0.97);
-    background-image: url('./images/truck_3_b&w.jpg');
+    background-image: url('./images/truck_3_b&w_dark.jpg');
     background-size: cover;
+    min-width: 928px;
+    overflow: hidden;
 }
 
-.main_homepage::before {
+/*.main_homepage::before {
     content: "";
     position: absolute;
     top: 100px;
@@ -136,7 +140,8 @@ html {
     left: 0px;
     background-color: rgba(0,0,0,0.7);
     height: 80vh;
-}
+    width: 100%;
+}*/
 
 .main_homepage_content {
     display: grid;
@@ -187,6 +192,8 @@ html {
 
 #gallery {
     background-color: rgb(28, 27, 28);
+    min-width: 928px;
+    overflow: hidden;
 }
 
 .gallery_content {
@@ -267,6 +274,8 @@ html {
     padding-bottom: 100px;
     justify-content: center;
     align-items: center;
+    min-width: 928px;
+    overflow: hidden;
 }
 
 .services_content {
@@ -335,6 +344,8 @@ html {
 
 #contact {
     height: 500px;
+    min-width: 928px;
+    overflow: hidden;
 }
 
 #contact h1 {
@@ -396,6 +407,8 @@ html {
     background-color: rgb(28, 27, 28);
     color: rgb(102 101 102);
     text-align: center;
+    min-width: 928px;
+    overflow: hidden;
 }
 
 .footer h3 {
