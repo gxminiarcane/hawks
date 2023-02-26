@@ -552,7 +552,7 @@ html {
         /* CSS FOR MAIN HOMEPAGE */
     
         .main_homepage {
-            height: 100vh;
+            height: 80vh;
             background-color: rgba(28, 27, 28, 0.97);
             background-image: url('./images/truck_3_b&w_dark.jpg');
             background-size: cover;
@@ -633,11 +633,10 @@ html {
             display: inline-flex;
             width: 100%;
             justify-content: space-around;
-            padding: 60px 100px;
+            padding: 50px 20px;
         }
     
         .gallery_content_row h1 {
-            width: 400px; 
             background-color: rgb(243, 210, 111);
             background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
             background-size: 100%;
@@ -645,11 +644,12 @@ html {
             -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
+            font-size: 20px;
         }
     
         .gallery_textbox {
             text-align: left;
-            padding: 50px 10px;
+            padding: 15px 5px 15px 0px;
             border-top: rgb(231, 224, 236) medium solid;
             border-image: linear-gradient(to right, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
         }
@@ -658,12 +658,11 @@ html {
             display: inline-flex;
             width: 100%;
             justify-content: space-around;
-            padding: 40px 100px;
+            padding: 50px 20px;
             background-color: rgb(42 42 42);
         }
     
-        .gallery_content_middlerow h1 {
-            width: 400px; 
+        .gallery_content_middlerow h1 { 
             background-color: rgb(243, 210, 111);
             background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
             background-size: 100%;
@@ -671,24 +670,26 @@ html {
             -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
+            font-size: 20px;
         }
     
         .gallery_middletextbox {
             text-align: right;
-            padding: 50px 10px;
+            padding: 15px 0px 15px 5px;
             border-top: rgb(231, 224, 236) medium solid;
             border-image: linear-gradient(to left, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
         }
     
         .gallery_image {
-            width: 300px;
-            height: 230px;
+            width: 200px;
+            height: 130px;
+            margin-right: 5px;
             border-radius: 16px;
             box-shadow: 13px 11px 13px rgba(243, 210, 111, 0.2);
         }
     
         .gallery_middleimage {
-            width: 300px;
+            width: 180px;
             border-radius: 16px;
             box-shadow: -13px 11px 13px rgba(243, 210, 111, 0.2);
         }
