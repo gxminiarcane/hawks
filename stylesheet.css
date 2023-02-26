@@ -552,7 +552,7 @@ html {
         /* CSS FOR MAIN HOMEPAGE */
     
         .main_homepage {
-            height: 80vh;
+            height: 100vh;
             background-color: rgba(28, 27, 28, 0.97);
             background-image: url('./images/truck_3_b&w_dark.jpg');
             background-size: cover;
