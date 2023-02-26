@@ -164,7 +164,7 @@ html {
         margin: 0 auto;
         padding: 10px;
         border-radius: 25px;
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         border: none;
         position: relative;
         top: 55px;
@@ -212,7 +212,7 @@ html {
     .gallery_content_row h1 {
         width: 400px; 
         background-color: rgb(243, 210, 111);
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -238,7 +238,7 @@ html {
     .gallery_content_middlerow h1 {
         width: 400px; 
         background-color: rgb(243, 210, 111);
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -291,7 +291,7 @@ html {
 
     .services_content h1 {
         background-color: rgb(243, 210, 111);
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         background-size: 34%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -326,7 +326,7 @@ html {
         font-size: 45px;
         margin-inline: 90px;
         background-color: rgb(243, 210, 111);
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -352,7 +352,7 @@ html {
 
     #contact h1 {
         background-color: rgb(243, 210, 111);
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         background-size: 11%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -379,7 +379,7 @@ html {
         margin: 0px auto 25px auto;
         padding: 10px;
         border-radius: 25px;
-        background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+        background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
         border: none;
         position: relative;
         top: 55px;
@@ -591,7 +591,7 @@ html {
             margin: 0 auto;
             padding: 10px;
             border-radius: 25px;
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             border: none;
             position: relative;
             top: 25px;
@@ -638,7 +638,7 @@ html {
     
         .gallery_content_row h1 {
             background-color: rgb(243, 210, 111);
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             background-size: 100%;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -664,7 +664,7 @@ html {
     
         .gallery_content_middlerow h1 { 
             background-color: rgb(243, 210, 111);
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             background-size: 100%;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -719,7 +719,7 @@ html {
     
         .services_content h1 {
             background-color: rgb(243, 210, 111);
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             background-size: 34%;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -755,7 +755,7 @@ html {
             font-size: 35px;
             margin-inline: 90px;
             background-color: rgb(243, 210, 111);
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             background-size: 100%;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -782,7 +782,7 @@ html {
     
         #contact h1 {
             background-color: rgb(243, 210, 111);
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             background-size: 11%;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -809,7 +809,7 @@ html {
             margin: 0px auto 25px auto;
             padding: 10px;
             border-radius: 25px;
-            background-image: radial-gradient(rgb(241 220 155) 30%, rgb(239 184 46) 100%);
+            background-image: radial-gradient(rgb(241 233 155) 30%, rgb(239 203 46) 100%);
             border: none;
             position: relative;
             top: 40px;
