@@ -12,450 +12,833 @@ html {
 
 /*CSS FOR NAV BAR SECTION */
 
-.navbar { /*makes the navbar not part of the page, so the background image is behind it. then blurs it into the image*/
-    background-color: rgb(28, 27, 28);
-   /* backdrop-filter: blur(18px); */
-    height: 100px;
-    display: block;
-    font-size: 1.2rem;/*possibly get rid of this*/
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    min-width: 928px;
-    overflow: hidden;
-}
+@media screen and (min-width: 769px) {
 
-.navbar__submenu {
-    display: flex; /*put the words inline instead of block*/
-    justify-content: space-between;
-    height: 100px;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.navicon {
-    display: inline-flex;
-    align-items: center;
-}
-
-.navbar_logo {
-    color: rgb(241, 215, 136);
-    display: flex;
-    align-items: center;
-    cursor: pointer; /*makes it so the cursor is a pointer when you hover over it*/
-    text-decoration: none; /*gets rid of underlines on clickable items*/
-    font-size: 35px;
-}
-
-.navbar_logo img {
-    height: 80px;
-    padding: 12px;
-    margin: 10px;
-}
-
-.navbar_menu { /*makes the Home and ManaPro inline and central in the div, hides it when not active*/
-    display: inline-flex;
-    align-items: center;
-    list-style: none; /*removes bullet points*/
-    text-align: center;
-    height: 50px;
-    visibility: hidden;
-    transform: translateX(15%); /*part of the animation, so it slides in from the right*/
-    transition: transform 0.4s ease-out;
-}
-
-.navbar_menu.is-active {
-    visibility: visible; /*makes it visible when you click on the toggle (alongside the javascript*/
-    transform: translateX(0%); /*part of the animation so it slides in from the right*/
-    padding-right: 50px; /*moves it a little away from the toggle button*/
-}
-
-.navbar_items {
-    padding: 20px; /*spaces the home and manapro away from each other*/
-}
-
-.navbar_links { /*changes colour of the links and displays them inline not block*/
-    color: rgb(243, 210, 111);
-    display: inline;
-    align-items: center; 
-    justify-content: center;
-    text-decoration: none;
-    height: 100%;
-}
-
-.navbar_toggle { /*changes the look of the square around the 3 little bars*/
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.10);
-    width: 60px;
-    border-radius: 6px;
-}
-
-.navbar_toggle .bar { /*makes the spans visible, white, size and space apart*/
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background: rgb(243, 210, 111);
-    transition: all 0.2s ease-out;
-    display: block; /*displays the bars below each other*/
-    cursor: pointer;
-}
-
-.navbar_toggle.is-active {
-    height: 50px; /*makes sure the square around the bars doesn't collapse when active*/
-}
-
-.navbar_toggle.is-active .bar:nth-child(2) { 
-    display: none; 
-}
-
-.navbar_toggle.is-active .bar:nth-child(1) {    /*makes the 3 bars turn into an X*/
-    transform: translateY(6px) rotate(45deg); 
-}
-
-.navbar_toggle.is-active .bar:nth-child(3) { 
-    transform: translateY(-2px) rotate(-45deg); 
-}
-
-/* CSS FOR MAIN HOMEPAGE */
-
-.main_homepage {
-    height: 80vh;
-    background-color: rgba(28, 27, 28, 0.97);
-    background-image: url('./images/truck_3_b&w_dark.jpg');
-    background-size: cover;
-    min-width: 928px;
-    overflow: hidden;
-}
-
-/*.main_homepage::before {
-    content: "";
-    position: absolute;
-    top: 100px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.7);
-    height: 80vh;
-    width: 100%;
-}*/
-
-.main_homepage_content {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-#main_homepage_content_hawks {
-    width: 550px;
-    position: relative;
-    top: 50px;
-}
-
-.main_homepage_button {
-    display: flex;
-    align-items: center;
-    width: 180px;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 25px;
-    background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
-    border: none;
-    position: relative;
-    top: 55px;
-}
-
-.main_homepage_button:hover {
-    transform: scale(1.15);
-    transition: 0.3s ease;
-}
-
-.main_homepage_button img {
-    height: 25px;
-    width: 25px;
-    margin: 5px;
-}
-
-.main_homepage_content a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-}
-
-
-/* CSS FOR GALLERY SECTION */
-
-#gallery {
-    background-color: rgb(28, 27, 28);
-    min-width: 928px;
-    overflow: hidden;
-}
-
-.gallery_content {
-    display: block;
-}
-
-.gallery_content_row {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-around;
-    padding: 60px 100px;
-}
-
-.gallery_content_row h1 {
-    width: 400px; 
-    background-color: rgb(243, 210, 111);
-    background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.gallery_textbox {
-    text-align: left;
-    padding: 50px 10px;
-    border-top: rgb(231, 224, 236) medium solid;
-    border-image: linear-gradient(to right, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
-}
-
-.gallery_content_middlerow {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-around;
-    padding: 40px 100px;
-    background-color: rgb(42 42 42);
-}
-
-.gallery_content_middlerow h1 {
-    width: 400px; 
-    background-color: rgb(243, 210, 111);
-    background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.gallery_middletextbox {
-    text-align: right;
-    padding: 50px 10px;
-    border-top: rgb(231, 224, 236) medium solid;
-    border-image: linear-gradient(to left, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
-}
-
-.gallery_image {
-    width: 300px;
-    height: 230px;
-    border-radius: 16px;
-    box-shadow: 13px 11px 13px rgba(243, 210, 111, 0.2);
-}
-
-.gallery_middleimage {
-    width: 300px;
-    border-radius: 16px;
-    box-shadow: -13px 11px 13px rgba(243, 210, 111, 0.2);
-}
-
-/* CSS FOR SERVICES SECTION*/
-
-#services {
-    background-color: rgb(28, 27, 28);
-    display: flex;
-    height: auto;
-    padding-top: 55px;
-    padding-bottom: 100px;
-    justify-content: center;
-    align-items: center;
-    min-width: 928px;
-    overflow: hidden;
-}
-
-.services_content {
-    width: 90%;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    height: 90%;
-    border: rgb(243, 210, 111) double 5px;
-    padding: 20px 30px;
-}
-
-.services_content h1 {
-    background-color: rgb(243, 210, 111);
-    background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
-    background-size: 34%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-#services p {
-    text-align: center;
-    color: white;
-    padding-inline: 20px;
-    font-size: 20px;
-    line-height: 27px;
-    font-family: 'Signika';
-    letter-spacing: 0.5px;
-}
-
-.services_icon_container {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px;
-}
-
-.services_column {
-    width: 100%;
-    text-align: center;
-}
-
-.services_icon {
-    font-size: 45px;
-    margin-inline: 90px;
-    background-color: rgb(243, 210, 111);
-    background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.services_column h2 {
-    width: 100%;
-    padding: 10px 35px;
-    letter-spacing: 0.8px;
-    color: white;
-    font-family: 'Signika';
-}
-
-/*CSS FOR CONTACT SECTION*/
-
-#contact {
-    height: 500px;
-    min-width: 928px;
-    overflow: hidden;
-}
-
-#contact h1 {
-    background-color: rgb(243, 210, 111);
-    background-image: linear-gradient(rgb(255 255 139) 30%, rgb(184 164 26) 70%);
-    background-size: 11%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    text-align: center;
-    font-size: 60px;
-    padding-top: 40px;
-    letter-spacing: 3px;
-}
-
-.contact_content {
-    background-color: rgba(28, 27, 28, 0.97);
-    background-image: url('./images/truck_3_b&w_dark.jpg');
-    background-size: cover;
-    height: 100%;
-}
-
-.contact_button {
-    display: flex;
-    align-items: center;
-    width: 250px;
-    justify-content: center;
-    margin: 0px auto 25px auto;
-    padding: 10px;
-    border-radius: 25px;
-    background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
-    border: none;
-    position: relative;
-    top: 55px;
-}
-
-.contact_button a {
-    text-decoration: none;
-    color: black;
-}
-
-.contact_button:hover {
-    transform: scale(1.15);
-    transition: 0.3s ease;
-}
-
-.contact_button img {
-    height: 25px;
-    width: 25px;
-    margin: 5px;
-}
-
-
-/* CSS FOR FOOTER SECTION */
-
-.footer {
-    height: 160px;
-    background-color: rgb(28, 27, 28);
-    color: rgb(102 101 102);
-    text-align: center;
-    min-width: 928px;
-    overflow: hidden;
-}
-
-.footer h3 {
-    padding-top: 70px;
-    letter-spacing: 1px;
-}
-
-.footer p {
-    padding: 5px;
-}
-
-
-
-
-/* MOBILE RESPONSIVE SECTION */
-
-
-@media screen and (max-width: 768px) {
-    body {
-      font-size: 16px;
-    } /*maybe remove this*/
-
-    .navbar {
+    .navbar { /*makes the navbar not part of the page, so the background image is behind it. then blurs it into the image*/
         background-color: rgb(28, 27, 28);
-   /* backdrop-filter: blur(18px); */
-    height: 240px;
-    display: block;
-    font-size: 1.2rem;/*possibly get rid of this*/
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    min-width: 928px;
-    overflow: hidden;
+    /* backdrop-filter: blur(18px); */
+        height: 100px;
+        display: block;
+        font-size: 1.2rem;/*possibly get rid of this*/
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        min-width: 928px;
+        overflow: hidden;
     }
 
-    .navbar_submenu {
+    .navbar__submenu {
         display: flex; /*put the words inline instead of block*/
         justify-content: space-between;
-        height: 240px;
+        height: 100px;
         width: 100%;
         max-width: 1300px;
         margin: 0 auto;
-        padding: 0 10px;  
+        padding: 0 10px;
     }
 
-  }
+    .navicon {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .navbar_logo {
+        color: rgb(241, 215, 136);
+        display: flex;
+        align-items: center;
+        cursor: pointer; /*makes it so the cursor is a pointer when you hover over it*/
+        text-decoration: none; /*gets rid of underlines on clickable items*/
+        font-size: 35px;
+    }
+
+    .navbar_logo img {
+        height: 80px;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .navbar_menu { /*makes the Home and ManaPro inline and central in the div, hides it when not active*/
+        display: inline-flex;
+        align-items: center;
+        list-style: none; /*removes bullet points*/
+        text-align: center;
+        height: 50px;
+        visibility: hidden;
+        transform: translateX(15%); /*part of the animation, so it slides in from the right*/
+        transition: transform 0.4s ease-out;
+    }
+
+    .navbar_menu.is-active {
+        visibility: visible; /*makes it visible when you click on the toggle (alongside the javascript*/
+        transform: translateX(0%); /*part of the animation so it slides in from the right*/
+        padding-right: 50px; /*moves it a little away from the toggle button*/
+    }
+
+    .navbar_items {
+        padding: 20px; /*spaces the home and manapro away from each other*/
+    }
+
+    .navbar_links { /*changes colour of the links and displays them inline not block*/
+        color: rgb(243, 210, 111);
+        display: inline;
+        align-items: center; 
+        justify-content: center;
+        text-decoration: none;
+        height: 100%;
+    }
+
+    .navbar_toggle { /*changes the look of the square around the 3 little bars*/
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.10);
+        width: 60px;
+        border-radius: 6px;
+    }
+
+    .navbar_toggle .bar { /*makes the spans visible, white, size and space apart*/
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background: rgb(243, 210, 111);
+        transition: all 0.2s ease-out;
+        display: block; /*displays the bars below each other*/
+        cursor: pointer;
+    }
+
+    .navbar_toggle.is-active {
+        height: 50px; /*makes sure the square around the bars doesn't collapse when active*/
+    }
+
+    .navbar_toggle.is-active .bar:nth-child(2) { 
+        display: none; 
+    }
+
+    .navbar_toggle.is-active .bar:nth-child(1) {    /*makes the 3 bars turn into an X*/
+        transform: translateY(6px) rotate(45deg); 
+    }
+
+    .navbar_toggle.is-active .bar:nth-child(3) { 
+        transform: translateY(-2px) rotate(-45deg); 
+    }
+
+    /* CSS FOR MAIN HOMEPAGE */
+
+    .main_homepage {
+        height: 80vh;
+        background-color: rgba(28, 27, 28, 0.97);
+        background-image: url('./images/truck_3_b&w_dark.jpg');
+        background-size: cover;
+        min-width: 928px;
+        overflow: hidden;
+    }
+
+    /*.main_homepage::before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.7);
+        height: 80vh;
+        width: 100%;
+    }*/
+
+    .main_homepage_content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main_homepage_content_hawks {
+        width: 550px;
+        position: relative;
+        top: 50px;
+    }
+
+    .main_homepage_button {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 25px;
+        background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+        border: none;
+        position: relative;
+        top: 55px;
+    }
+
+    .main_homepage_button:hover {
+        transform: scale(1.15);
+        transition: 0.3s ease;
+    }
+
+    .main_homepage_button img {
+        height: 25px;
+        width: 25px;
+        margin: 5px;
+    }
+
+    .main_homepage_content a {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+
+    /* CSS FOR GALLERY SECTION */
+
+    #gallery {
+        background-color: rgb(28, 27, 28);
+        min-width: 928px;
+        overflow: hidden;
+    }
+
+    .gallery_content {
+        display: block;
+    }
+
+    .gallery_content_row {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 60px 100px;
+    }
+
+    .gallery_content_row h1 {
+        width: 400px; 
+        background-color: rgb(243, 210, 111);
+        background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .gallery_textbox {
+        text-align: left;
+        padding: 50px 10px;
+        border-top: rgb(231, 224, 236) medium solid;
+        border-image: linear-gradient(to right, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
+    }
+
+    .gallery_content_middlerow {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 40px 100px;
+        background-color: rgb(42 42 42);
+    }
+
+    .gallery_content_middlerow h1 {
+        width: 400px; 
+        background-color: rgb(243, 210, 111);
+        background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .gallery_middletextbox {
+        text-align: right;
+        padding: 50px 10px;
+        border-top: rgb(231, 224, 236) medium solid;
+        border-image: linear-gradient(to left, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
+    }
+
+    .gallery_image {
+        width: 300px;
+        height: 230px;
+        border-radius: 16px;
+        box-shadow: 13px 11px 13px rgba(243, 210, 111, 0.2);
+    }
+
+    .gallery_middleimage {
+        width: 300px;
+        border-radius: 16px;
+        box-shadow: -13px 11px 13px rgba(243, 210, 111, 0.2);
+    }
+
+    /* CSS FOR SERVICES SECTION*/
+
+    #services {
+        background-color: rgb(28, 27, 28);
+        display: flex;
+        height: auto;
+        padding-top: 55px;
+        padding-bottom: 100px;
+        justify-content: center;
+        align-items: center;
+        min-width: 928px;
+        overflow: hidden;
+    }
+
+    .services_content {
+        width: 90%;
+        background-color: #2a2a2a;
+        border-radius: 10px;
+        height: 90%;
+        border: rgb(243, 210, 111) double 5px;
+        padding: 20px 30px;
+    }
+
+    .services_content h1 {
+        background-color: rgb(243, 210, 111);
+        background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+        background-size: 34%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #services p {
+        text-align: center;
+        color: white;
+        padding-inline: 20px;
+        font-size: 20px;
+        line-height: 27px;
+        font-family: 'Signika';
+        letter-spacing: 0.5px;
+    }
+
+    .services_icon_container {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px;
+    }
+
+    .services_column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .services_icon {
+        font-size: 45px;
+        margin-inline: 90px;
+        background-color: rgb(243, 210, 111);
+        background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .services_column h2 {
+        width: 100%;
+        padding: 10px 35px;
+        letter-spacing: 0.8px;
+        color: white;
+        font-family: 'Signika';
+    }
+
+    /*CSS FOR CONTACT SECTION*/
+
+    #contact {
+        height: 500px;
+        min-width: 928px;
+        overflow: hidden;
+    }
+
+    #contact h1 {
+        background-color: rgb(243, 210, 111);
+        background-image: linear-gradient(rgb(255 255 139) 30%, rgb(184 164 26) 70%);
+        background-size: 11%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        text-align: center;
+        font-size: 60px;
+        padding-top: 40px;
+        letter-spacing: 3px;
+    }
+
+    .contact_content {
+        background-color: rgba(28, 27, 28, 0.97);
+        background-image: url('./images/truck_3_b&w_dark.jpg');
+        background-size: cover;
+        height: 100%;
+    }
+
+    .contact_button {
+        display: flex;
+        align-items: center;
+        width: 250px;
+        justify-content: center;
+        margin: 0px auto 25px auto;
+        padding: 10px;
+        border-radius: 25px;
+        background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+        border: none;
+        position: relative;
+        top: 55px;
+    }
+
+    .contact_button a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .contact_button:hover {
+        transform: scale(1.15);
+        transition: 0.3s ease;
+    }
+
+    .contact_button img {
+        height: 25px;
+        width: 25px;
+        margin: 5px;
+    }
+
+
+    /* CSS FOR FOOTER SECTION */
+
+    .footer {
+        height: 160px;
+        background-color: rgb(28, 27, 28);
+        color: rgb(102 101 102);
+        text-align: center;
+        min-width: 928px;
+        overflow: hidden;
+    }
+
+    .footer h3 {
+        padding-top: 70px;
+        letter-spacing: 1px;
+    }
+
+    .footer p {
+        padding: 5px;
+    }
+
+}
+
+
+    /* MOBILE RESPONSIVE SECTION */
+
+
+    @media screen and (max-width: 768px) {
+
+        .navbar { /*makes the navbar not part of the page, so the background image is behind it. then blurs it into the image*/
+            background-color: rgb(28, 27, 28);
+        /* backdrop-filter: blur(18px); */
+            height: 100px;
+            display: block;
+            font-size: 1.2rem;/*possibly get rid of this*/
+            width: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            max-width: 768px;
+            overflow: hidden;
+        }
+    
+        .navbar__submenu {
+            display: flex; /*put the words inline instead of block*/
+            justify-content: space-between;
+            height: 100px;
+            width: 100%;
+            /*max-width: 768px; */
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    
+        .navicon {
+            display: inline-flex;
+            align-items: center;
+        }
+    
+        .navbar_logo {
+            color: rgb(241, 215, 136);
+            display: flex;
+            align-items: center;
+            cursor: pointer; /*makes it so the cursor is a pointer when you hover over it*/
+            text-decoration: none; /*gets rid of underlines on clickable items*/
+            font-size: 35px;
+        }
+    
+        .navbar_logo img {
+            height: 80px;
+            padding: 12px;
+            margin: 10px;
+        }
+    
+        .navbar_menu { /*makes the Home and ManaPro inline and central in the div, hides it when not active*/
+            display: inline-flex;
+            align-items: center;
+            list-style: none; /*removes bullet points*/
+            text-align: center;
+            height: 50px;
+            visibility: hidden;
+            transform: translateX(15%); /*part of the animation, so it slides in from the right*/
+            transition: transform 0.4s ease-out;
+        }
+    
+        .navbar_menu.is-active {
+            visibility: visible; /*makes it visible when you click on the toggle (alongside the javascript*/
+            transform: translateX(0%); /*part of the animation so it slides in from the right*/
+            padding-right: 50px; /*moves it a little away from the toggle button*/
+        }
+    
+        .navbar_items {
+            padding: 20px; /*spaces the home and manapro away from each other*/
+        }
+    
+        .navbar_links { /*changes colour of the links and displays them inline not block*/
+            color: rgb(243, 210, 111);
+            display: inline;
+            align-items: center; 
+            justify-content: center;
+            text-decoration: none;
+            height: 100%;
+        }
+    
+        .navbar_toggle { /*changes the look of the square around the 3 little bars*/
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.10);
+            width: 60px;
+            border-radius: 6px;
+        }
+    
+        .navbar_toggle .bar { /*makes the spans visible, white, size and space apart*/
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background: rgb(243, 210, 111);
+            transition: all 0.2s ease-out;
+            display: block; /*displays the bars below each other*/
+            cursor: pointer;
+        }
+    
+        .navbar_toggle.is-active {
+            height: 50px; /*makes sure the square around the bars doesn't collapse when active*/
+        }
+    
+        .navbar_toggle.is-active .bar:nth-child(2) { 
+            display: none; 
+        }
+    
+        .navbar_toggle.is-active .bar:nth-child(1) {    /*makes the 3 bars turn into an X*/
+            transform: translateY(6px) rotate(45deg); 
+        }
+    
+        .navbar_toggle.is-active .bar:nth-child(3) { 
+            transform: translateY(-2px) rotate(-45deg); 
+        }
+    
+        /* CSS FOR MAIN HOMEPAGE */
+    
+        .main_homepage {
+            height: 80vh;
+            background-color: rgba(28, 27, 28, 0.97);
+            background-image: url('./images/truck_3_b&w_dark.jpg');
+            background-size: cover;
+            max-width: 768px;
+            overflow: hidden;
+        }
+    
+        /*.main_homepage::before {
+            content: "";
+            position: absolute;
+            top: 100px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,0.7);
+            height: 80vh;
+            width: 100%;
+        }*/
+    
+        .main_homepage_content {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        #main_homepage_content_hawks {
+            width: 550px;
+            position: relative;
+            top: 50px;
+        }
+    
+        .main_homepage_button {
+            display: flex;
+            align-items: center;
+            width: 180px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 25px;
+            background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+            border: none;
+            position: relative;
+            top: 55px;
+        }
+    
+        .main_homepage_button:hover {
+            transform: scale(1.15);
+            transition: 0.3s ease;
+        }
+    
+        .main_homepage_button img {
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+        }
+    
+        .main_homepage_content a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+    
+    
+        /* CSS FOR GALLERY SECTION */
+    
+        #gallery {
+            background-color: rgb(28, 27, 28);
+            max-width: 768px;
+            overflow: hidden;
+        }
+    
+        .gallery_content {
+            display: block;
+        }
+    
+        .gallery_content_row {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-around;
+            padding: 60px 100px;
+        }
+    
+        .gallery_content_row h1 {
+            width: 400px; 
+            background-color: rgb(243, 210, 111);
+            background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+        }
+    
+        .gallery_textbox {
+            text-align: left;
+            padding: 50px 10px;
+            border-top: rgb(231, 224, 236) medium solid;
+            border-image: linear-gradient(to right, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
+        }
+    
+        .gallery_content_middlerow {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-around;
+            padding: 40px 100px;
+            background-color: rgb(42 42 42);
+        }
+    
+        .gallery_content_middlerow h1 {
+            width: 400px; 
+            background-color: rgb(243, 210, 111);
+            background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+        }
+    
+        .gallery_middletextbox {
+            text-align: right;
+            padding: 50px 10px;
+            border-top: rgb(231, 224, 236) medium solid;
+            border-image: linear-gradient(to left, rgb(242, 210, 111) 10%, transparent 100%) 100% 1;
+        }
+    
+        .gallery_image {
+            width: 300px;
+            height: 230px;
+            border-radius: 16px;
+            box-shadow: 13px 11px 13px rgba(243, 210, 111, 0.2);
+        }
+    
+        .gallery_middleimage {
+            width: 300px;
+            border-radius: 16px;
+            box-shadow: -13px 11px 13px rgba(243, 210, 111, 0.2);
+        }
+    
+        /* CSS FOR SERVICES SECTION*/
+    
+        #services {
+            background-color: rgb(28, 27, 28);
+            display: flex;
+            height: auto;
+            padding-top: 55px;
+            padding-bottom: 100px;
+            justify-content: center;
+            align-items: center;
+            max-width: 768px;
+            overflow: hidden;
+        }
+    
+        .services_content {
+            width: 90%;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            height: 90%;
+            border: rgb(243, 210, 111) double 5px;
+            padding: 20px 30px;
+        }
+    
+        .services_content h1 {
+            background-color: rgb(243, 210, 111);
+            background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+            background-size: 34%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    
+        #services p {
+            text-align: center;
+            color: white;
+            padding-inline: 20px;
+            font-size: 20px;
+            line-height: 27px;
+            font-family: 'Signika';
+            letter-spacing: 0.5px;
+        }
+    
+        .services_icon_container {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px;
+        }
+    
+        .services_column {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .services_icon {
+            font-size: 45px;
+            margin-inline: 90px;
+            background-color: rgb(243, 210, 111);
+            background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+        }
+    
+        .services_column h2 {
+            width: 100%;
+            padding: 10px 35px;
+            letter-spacing: 0.8px;
+            color: white;
+            font-family: 'Signika';
+        }
+    
+        /*CSS FOR CONTACT SECTION*/
+    
+        #contact {
+            height: 500px;
+            max-width: 768px;
+            overflow: hidden;
+        }
+    
+        #contact h1 {
+            background-color: rgb(243, 210, 111);
+            background-image: linear-gradient(rgb(255 255 139) 30%, rgb(184 164 26) 70%);
+            background-size: 11%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            text-align: center;
+            font-size: 60px;
+            padding-top: 40px;
+            letter-spacing: 3px;
+        }
+    
+        .contact_content {
+            background-color: rgba(28, 27, 28, 0.97);
+            background-image: url('./images/truck_3_b&w_dark.jpg');
+            background-size: cover;
+            height: 100%;
+        }
+    
+        .contact_button {
+            display: flex;
+            align-items: center;
+            width: 250px;
+            justify-content: center;
+            margin: 0px auto 25px auto;
+            padding: 10px;
+            border-radius: 25px;
+            background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
+            border: none;
+            position: relative;
+            top: 55px;
+        }
+    
+        .contact_button a {
+            text-decoration: none;
+            color: black;
+        }
+    
+        .contact_button:hover {
+            transform: scale(1.15);
+            transition: 0.3s ease;
+        }
+    
+        .contact_button img {
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+        }
+    
+    
+        /* CSS FOR FOOTER SECTION */
+    
+        .footer {
+            height: 160px;
+            background-color: rgb(28, 27, 28);
+            color: rgb(102 101 102);
+            text-align: center;
+            max-width: 768px;
+            overflow: hidden;
+        }
+    
+        .footer h3 {
+            padding-top: 70px;
+            letter-spacing: 1px;
+        }
+    
+        .footer p {
+            padding: 5px;
+        }
+       
+    
+      }
 
 
