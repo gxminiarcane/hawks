@@ -426,6 +426,36 @@ html {
 /* MOBILE RESPONSIVE SECTION */
 
 
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 16px;
+    } /*maybe remove this*/
 
+    .navbar {
+        background-color: rgb(28, 27, 28);
+   /* backdrop-filter: blur(18px); */
+    height: 240px;
+    display: block;
+    font-size: 1.2rem;/*possibly get rid of this*/
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    min-width: 928px;
+    overflow: hidden;
+    }
+
+    .navbar_submenu {
+        display: flex; /*put the words inline instead of block*/
+        justify-content: space-between;
+        height: 240px;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 10px;  
+    }
+
+  }
 
 
