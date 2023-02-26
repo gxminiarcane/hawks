@@ -579,9 +579,9 @@ html {
         }
     
         #main_homepage_content_hawks {
-            width: 350px;
+            width: 85vw;
             position: relative;
-            top: 50px;
+            top: 20px;
         }
     
         .main_homepage_button {
@@ -594,7 +594,7 @@ html {
             background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
             border: none;
             position: relative;
-            top: 55px;
+            top: 25px;
         }
     
         .main_homepage_button:hover {
