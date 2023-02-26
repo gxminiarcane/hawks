@@ -482,6 +482,7 @@ html {
             top: 100px;
             right: 0px;
             width: 100%;
+            padding-bottom: 13px;
             margin: 0 auto;
             align-items: center;
             justify-content: center;
@@ -501,8 +502,8 @@ html {
         }
     
         .navbar_items {
-            padding: 10px; /*spaces the home and manapro away from each other*/
-            border-bottom: solid gold 2px;
+            padding: 7px; /*spaces the home and manapro away from each other*/
+            border-bottom: solid rgb(239, 184, 46) 1px;
         }
     
         .navbar_links { /*changes colour of the links and displays them inline not block*/
