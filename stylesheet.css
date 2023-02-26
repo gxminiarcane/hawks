@@ -476,27 +476,33 @@ html {
         }
     
         .navbar_menu { /*makes the Home and ManaPro inline and central in the div, hides it when not active*/
-            display: block;
+            display: grid;
+            grid-template-columns: auto;
             position: fixed;
             top: 100px;
-            right: 100px;
+            right: 0px;
+            width: 100%;
+            margin: 0 auto;
             align-items: center;
+            justify-content: center;
             list-style: none; /*removes bullet points*/
             text-align: center;
-            height: 50px;
+            background-color:rgb(28, 27, 28);
             visibility: hidden;
-            transform: translateX(15%); /*part of the animation, so it slides in from the right*/
-            transition: transform 0.4s ease-out;
+            transform: translateY(-65%); /*part of the animation, so it slides in from the right*/
+            transition: transform 0.5s ease;
         }
     
         .navbar_menu.is-active {
             visibility: visible; /*makes it visible when you click on the toggle (alongside the javascript*/
-            transform: translateX(0%); /*part of the animation so it slides in from the right*/
-            padding-right: 50px; /*moves it a little away from the toggle button*/
+            transform: translateY(0%); /*part of the animation so it slides in from the right*/
+           /* padding-right: 50px; /*moves it a little away from the toggle button*/
+            transition: all 0.5s ease;
         }
     
         .navbar_items {
-            padding: 20px; /*spaces the home and manapro away from each other*/
+            padding: 10px; /*spaces the home and manapro away from each other*/
+            border-bottom: solid gold 2px;
         }
     
         .navbar_links { /*changes colour of the links and displays them inline not block*/
