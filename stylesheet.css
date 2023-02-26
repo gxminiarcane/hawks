@@ -789,7 +789,7 @@ html {
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
             text-align: center;
-            font-size: 60px;
+            font-size: 45px;
             padding-top: 40px;
             letter-spacing: 3px;
         }
@@ -812,7 +812,8 @@ html {
             background-image: radial-gradient(rgb(255 255 139) 40%, rgb(184 164 26) 100%);
             border: none;
             position: relative;
-            top: 55px;
+            top: 40px;
+            font-size: 16px;
         }
     
         .contact_button a {
@@ -846,10 +847,12 @@ html {
         .footer h3 {
             padding-top: 70px;
             letter-spacing: 1px;
+            font-size: 16px;
         }
     
         .footer p {
             padding: 5px;
+            font-size: 12px;
         }
        
     
